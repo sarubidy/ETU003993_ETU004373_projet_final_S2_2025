@@ -145,3 +145,6 @@ insert into s2_images_objet(id_objet,nom_image) value (2,'');
 insert into s2_images_objet(id_objet,nom_image) value (3,'');
 insert into s2_images_objet(id_objet,nom_image) value (4,'');
 */
+
+ALTER TABLE s2_objet
+ADD COLUMN dispo VARCHAR(20);
