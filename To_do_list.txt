@@ -1,0 +1,17 @@
+ETU003993_ETU004373_projet_final_S2_2025
+
+To do list
+
+Organisation du dossier
+    assets/
+        css
+        bootstrap
+        images
+    consignes/
+    includer/
+        connection.php
+        fonction.php
+    sql/
+    index.php
+    To_do_list.txt
+
