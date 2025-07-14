@@ -14,4 +14,14 @@ Organisation du dossier
     sql/
     index.php
     To_do_list.txt
-
+Inserer les donnees (test)
+    Inserer Into et select
+connection.php
+    connect root
+     mysqli_connect('localhost', 'root', '', 'db_s2_ETU003993');
+ function.php
+    function login($mdp,$mail) and inscr($nom,$naissance,$mail,$mdp)
+    function aff_objet (date de retour si emprunt en cours)
+pages
+   index.php
+   
