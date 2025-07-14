@@ -138,3 +138,10 @@ SELECT * FROM s2_images_objet;
 
 -- Tous les emprunts
 SELECT * FROM s2_emprunt;
+
+/*
+insert into s2_images_objet(id_objet,nom_image) value (1,'');
+insert into s2_images_objet(id_objet,nom_image) value (2,'');
+insert into s2_images_objet(id_objet,nom_image) value (3,'');
+insert into s2_images_objet(id_objet,nom_image) value (4,'');
+*/

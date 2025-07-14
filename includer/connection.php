@@ -9,8 +9,8 @@ function dbconnect()
     static $connect = null;
 
     if ($connect === null) {
-        //$connect = mysqli_connect('localhost', 'root', '', 'db_s2_ETU003993');
-        $connect = mysqli_connect('localhost', 'ETU003993','0juaq6V3', 'db_s2_ETU003993');
+        $connect = mysqli_connect('localhost', 'root', '', 'db_s2_ETU003993');
+        //$connect = mysqli_connect('localhost', 'ETU003993','0juaq6V3', 'db_s2_ETU003993');
         if (!$connect) {
             die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
         }

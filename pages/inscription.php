@@ -1,69 +1,81 @@
 <?php 
 require('../includer/connection.php');
-$num=0;
-$error=" ";
-if(isset($_GET['num']))
-{
-    if($_GET['num'] == 1)
-    {
+$error = "";
+if(isset($_GET['num'])) {
+    if($_GET['num'] == 1) {
         $error = 'Veuillez remplir tous les champs';
     }
-    if($_GET['num'] == 2)
-    {
-        $error = "L'adresse E-mail est déja utilisé par un(e) autre utilisateur/ice ";
+    if($_GET['num'] == 2) {
+        $error = "L'adresse E-mail est déja utilisée par un(e) autre utilisateur/ice ";
     }
-    if($_GET['num'] == 3)
-    {
+    if($_GET['num'] == 3) {
         $error = "Mot de passe incorrect";
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <title>Documents</title>
 </head>
-
-<body>
-    
-        <form action="traitements/traitement_inscr.php" method="post">
-        
-            <p>Nom: <input type="text" name="nom" required></p>
-        
-            
-            <p>Date de naissance: <input type="date" name="naissance" required></p>
-        
-            
-            <p>Adresse E-mail: <input type="email" name="mail" required></p>
-        
-        
-            <p>Genre: <select name="genre">
-            <option value="Homme">Homme</option>
-            <option value="Femme">Femme</option>
-            </select>
-        </p>
-        
-        
-            <p>Ville: <input type="text" name="ville" required></p>
-        
-               
-            <p>Mot de passe: <input type="password" name="passe" required></p>
-        
-                
-            <p>Confirmer votre mot de passe: <input type="password" name="passe2" required></p>
-        
-            <input type="submit" value="s'inscrire" class="connexion">
-        </form>
-        <br>
-        <p><span class="erreur"><?=$error;?></span></p>
-
-        <br>
-        <br>
-        <span class="ann"><a href="index.php">Anuler</a></span>    
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">RE<span class="text-primary">NT</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+    <div class="container d-flex mt-4 flex-column justify-content-center align-items-center" style="min-height:90vh;">
+        <div class="card shadow-sm p-4" style="max-width: 500px; width:100%;">
+            <h3 class="mb-4 text-center">Inscription</h3>
+            <?php if($error) {?>
+                <div class="alert alert-danger py-2"><?= $error ?></div>
+            <?php } ?>
+            <form action="traitements/traitement_inscr.php" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control" name="nom" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Date de naissance</label>
+                    <input type="date" class="form-control" name="naissance" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Adresse E-mail</label>
+                    <input type="email" class="form-control" name="mail" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Genre</label>
+                    <select name="genre" class="form-select">
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ville</label>
+                    <input type="text" class="form-control" name="ville" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" name="passe" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Confirmer votre mot de passe</label>
+                    <input type="password" class="form-control" name="passe2" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-2">S'inscrire</button>
+            </form>
+            <a href="index.php" class="btn btn-outline-secondary w-100">Annuler</a>
+        </div>
+    </div>
 </body>
 </html>
