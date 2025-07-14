@@ -42,5 +42,6 @@ $donne = list_cat();
         </table>
 
        <?php }  ?>
+       <a href="deco.php">Déconnection</a>
 </body>
 </html>
