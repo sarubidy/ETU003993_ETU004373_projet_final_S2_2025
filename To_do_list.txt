@@ -24,4 +24,10 @@ connection.php
     function aff_objet (date de retour si emprunt en cours)
 pages
    index.php
+
+accueil.php
+formulaire de list deroulente pour choisir quelle categorie afficher 
+
+
+   
    
