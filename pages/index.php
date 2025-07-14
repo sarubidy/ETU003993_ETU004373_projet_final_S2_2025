@@ -10,7 +10,6 @@
 <body>
 <main>
     <article class="main">
-        <span class="welcom"><h1>Bienvenu sur le réseau <span class="sa">SA </span> FACE </h1>  </span>
         <div class="idx">
             <h3>Voulez-vous</h3>
             <p><span class="boutton"><a href="login.php">vous connecter</a></span></p>
